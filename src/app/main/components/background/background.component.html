@@ -1,0 +1,12 @@
+<div
+  class="background background-wrapper"
+  waBackgroundTransition
+  [weatherData]="weatherData()"
+  [@backgroundTransition]
+>
+  <div class="background default"></div>
+</div>
+
+<div class="shadow">
+  <ng-content></ng-content>
+</div>

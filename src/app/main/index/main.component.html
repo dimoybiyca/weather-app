@@ -1,0 +1,15 @@
+<wa-background [weatherData]="data">
+  <div class="page">
+    <div class="page-content">
+      <wa-logo class="page-logo"></wa-logo>
+
+      @if (data) {
+        <wa-weather-display [weatherData]="data"></wa-weather-display>
+      }
+    </div>
+
+    <div class="page-sidebar">
+      <wa-sidebar></wa-sidebar>
+    </div>
+  </div>
+</wa-background>

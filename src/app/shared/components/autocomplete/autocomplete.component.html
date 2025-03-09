@@ -1,0 +1,58 @@
+<div class="autocomplete" waClickOutside (clickOutside)="onBlur()">
+  <div class="autocomplete-control">
+    <label class="autocomplete-label" for="autocomplete-input" hidden>
+      {{ placeholder() }}
+    </label>
+    <input
+      #input
+      class="autocomplete-input"
+      id="autocomplete-input"
+      type="text"
+      [placeholder]="placeholder()"
+      [formControl]="searchFormControl"
+      role="combobox"
+      aria-haspopup="listbox"
+      [attr.aria-expanded]="isDropdownOpen()"
+      aria-autocomplete="list"
+      tabindex="0"
+      (focus)="onFocus()"
+      (keydown)="onKeyDown($event)"
+    />
+
+    @if (options().length > 0) {
+      <button
+        class="autocomplete-button"
+        (click)="toggleDropdown()"
+        [ngClass]="{ open: isDropdownOpen() }"
+        aria-label="Toggle dropdown"
+      >
+        <wa-icon class="autocomplete-icon" icon="arrow_drop_down"></wa-icon>
+      </button>
+    }
+  </div>
+
+  @if (isDropdownOpen()) {
+    <ul
+      class="autocomplete-dropdown"
+      role="listbox"
+      [@expandCollapse]="{
+        value: isDropdownOpen(),
+        params: { maxHeight },
+      }"
+    >
+      @for (option of options(); track $index) {
+        <li
+          class="autocomplete-item"
+          role="option"
+          [id]="'option-' + $index"
+          [ngClass]="{ active: $index === activeIndex() }"
+          tabindex="0"
+          (mousedown)="selectOption(option)"
+          (keydown)="onKeyDown($event)"
+        >
+          {{ option.title }}
+        </li>
+      }
+    </ul>
+  }
+</div>

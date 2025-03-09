@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "weather-font";
+  src: url("/font/weather-font/weather-font.eot?52504776");
+  src:
+    url("/font/weather-font/weather-font.eot?52504776#iefix")
+      format("embedded-opentype"),
+    url("/font/weather-font/weather-font.woff2?52504776") format("woff2"),
+    url("/font/weather-font/weather-font.woff?52504776") format("woff"),
+    url("/font/weather-font/weather-font.ttf?52504776") format("truetype"),
+    url("/font/weather-font/weather-font.svg?52504776#weather-font")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.weather-font,
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "weather-font";
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+
+  font-variant: normal;
+  text-transform: none;
+
+  line-height: 1em;
+
+  margin-left: 0.2em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-droplet:before {
+  content: "\e800";
+} /* '' */
+.icon-cloud:before {
+  content: "\e802";
+} /* '' */
+.icon-air:before {
+  content: "\e803";
+} /* '' */
+.icon-search:before {
+  content: "\e804";
+} /* '' */
+.icon-ac_unit:before {
+  content: "\e805";
+} /* '' */
+.icon-sunny:before {
+  content: "\e806";
+} /* '' */
+.icon-thunderstorm:before {
+  content: "\e807";
+} /* '' */
+.icon-rain:before {
+  content: "\e809";
+} /* '' */
+.icon-drizzle:before {
+  content: "\e80a";
+} /* '' */
+.icon-mist:before {
+  content: "\e80b";
+} /* '' */

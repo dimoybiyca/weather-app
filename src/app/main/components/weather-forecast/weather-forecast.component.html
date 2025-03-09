@@ -1,0 +1,27 @@
+<div class="forecast">
+  @if (forecasts().length) {
+    <div class="forecast-title">Forecast</div>
+  }
+
+  <ul class="forecast-list">
+    @for (forecast of forecasts(); track $index) {
+      <li class="forecast-item">
+        <wa-weather-icon
+          class="forecast-icon"
+          [condition]="forecast.condition"
+        ></wa-weather-icon>
+
+        <div class="forecast-data">
+          <div class="forecast-time">
+            {{ forecast.date | date: "HH : mm" : "UTC" }}
+          </div>
+          <div class="forecast-condition">{{ forecast.condition }}</div>
+        </div>
+
+        <div class="forecast-temperature">
+          {{ forecast.temperature | temperature }}
+        </div>
+      </li>
+    }
+  </ul>
+</div>

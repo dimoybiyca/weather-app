@@ -1,0 +1,11 @@
+<div class="city">
+  <wa-autocomplete
+    class="city-autocomplete"
+    placeholder="Search location..."
+    [options]="predictions"
+    [formControl]="formControl"
+    (searchChange)="onSearch($event)"
+  ></wa-autocomplete>
+
+  <wa-icon class="city-icon" icon="search"></wa-icon>
+</div>

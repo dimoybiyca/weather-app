@@ -1,0 +1,22 @@
+<div class="details">
+  <div class="details-description">{{ weatherData()?.description }}</div>
+
+  <dl class="details-list">
+    @for (detail of detailsList; track $index) {
+      <div class="details-item">
+        <dt class="details-title">{{ detail.title }}</dt>
+        <dd class="details-desc">
+          <div class="details-value">
+            <span
+              class="detail-number"
+              waNumberAnimation
+              [targetNumber]="getDetailValue(detail)"
+            ></span>
+            <span details-unit>{{ detail.unit }}</span>
+          </div>
+          <wa-icon class="details-icon" [icon]="detail.icon"></wa-icon>
+        </dd>
+      </div>
+    }
+  </dl>
+</div>

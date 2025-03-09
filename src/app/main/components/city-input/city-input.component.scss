@@ -1,0 +1,14 @@
+.city {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &-icon {
+    color: var(--white);
+    font-size: 3rem;
+  }
+
+  &-autocomplete {
+    flex-grow: 1;
+  }
+}

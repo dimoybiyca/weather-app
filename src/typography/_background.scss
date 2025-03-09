@@ -1,0 +1,143 @@
+.background-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(1rem);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.default {
+  background-image: url("/img/default.webp");
+}
+
+.clear {
+  &.morning {
+    background-image: url("/img/clear-morning.webp");
+  }
+
+  &.day {
+    background-image: url("/img/clear-day.webp");
+  }
+
+  &.evening {
+    background-image: url("/img/clear-evening.webp");
+  }
+
+  &.night {
+    background-image: url("/img/clear-night.webp");
+  }
+}
+
+.clouds {
+  &.morning {
+    background-image: url("/img/clouds-morning.webp");
+  }
+
+  &.day {
+    background-image: url("/img/clouds-day.webp");
+  }
+
+  &.evening {
+    background-image: url("/img/clouds-evening.webp");
+  }
+
+  &.night {
+    background-image: url("/img/clouds-night.webp");
+  }
+}
+
+.rain {
+  &.morning {
+    background-image: url("/img/rain-day.webp");
+  }
+
+  &.day {
+    background-image: url("/img/rain-day.webp");
+  }
+
+  &.evening {
+    background-image: url("/img/rain-day.webp");
+  }
+
+  &.night {
+    background-image: url("/img/rain-night.webp");
+  }
+}
+
+.drizzle {
+  &.morning {
+    background-image: url("/img/drizzle-day.webp");
+  }
+
+  &.day {
+    background-image: url("/img/drizzle-day.webp");
+  }
+
+  &.evening {
+    background-image: url("/img/drizzle-day.webp");
+  }
+
+  &.night {
+    background-image: url("/img/drizzle-night.webp");
+  }
+}
+
+.thunderstorm {
+  &.morning {
+    background-image: url("/img/thunderstorm-day.webp");
+  }
+
+  &.day {
+    background-image: url("/img/thunderstorm-day.webp");
+  }
+
+  &.evening {
+    background-image: url("/img/thunderstorm-day.webp");
+  }
+
+  &.night {
+    background-image: url("/img/thunderstorm-night.webp");
+  }
+}
+
+.snow {
+  &.morning {
+    background-image: url("/img/snow-day.webp");
+  }
+
+  &.day {
+    background-image: url("/img/snow-day.webp");
+  }
+
+  &.evening {
+    background-image: url("/img/snow-day.webp");
+  }
+
+  &.night {
+    background-image: url("/img/snow-night.webp");
+  }
+}
+
+.atmosphere {
+  background-image: url("/img/mist.webp");
+}

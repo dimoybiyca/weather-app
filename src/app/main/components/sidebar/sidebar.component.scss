@@ -1,0 +1,23 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 2rem;
+  height: 100%;
+  min-height: 400px;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.divider {
+  margin: 2rem 0.5rem;
+  border-bottom: 0.4rem solid var(--white);
+  opacity: 0.6;
+}

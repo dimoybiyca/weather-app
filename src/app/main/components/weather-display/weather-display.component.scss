@@ -1,0 +1,50 @@
+.weather {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+
+  &-temperature {
+    display: flex;
+    font-size: 10rem;
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  &-location {
+    font-size: 5rem;
+  }
+
+  &-date {
+    font-size: 2rem;
+  }
+
+  &-icon {
+    font-size: 8rem;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .weather {
+    flex-direction: column;
+    align-items: center;
+
+    &-temperature {
+      order: 1;
+    }
+
+    &-data {
+      order: 2;
+    }
+
+    &-icon {
+      order: 0;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.details {
+  &-description {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  &-title {
+    color: var(--gray);
+  }
+
+  &-desc {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  &-icon {
+    font-size: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}

@@ -1,0 +1,7 @@
+@if (isSvgIcon()) {
+  <svg [ngStyle]="{ color: getColor() }">
+    <use [attr.xlink:href]="'/icons.svg#ICON_' + getIcon()"></use>
+  </svg>
+} @else {
+  <span class="weather-font icon-{{ getIcon() }}"></span>
+}

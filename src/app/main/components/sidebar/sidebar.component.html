@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <wa-city-input class="sidebar-input"></wa-city-input>
+
+  @if (data && forecast) {
+    <div class="sidebar-data" [@fade]>
+      <wa-weather-details [weatherData]="data"></wa-weather-details>
+
+      <div class="divider"></div>
+
+      <wa-weather-forecast [forecasts]="forecast"></wa-weather-forecast>
+    </div>
+  } @else {
+    <div class="empty">
+      <wa-icon icon="cloud_off"></wa-icon>
+      <p>Search for a city to get started</p>
+    </div>
+  }
+</div>

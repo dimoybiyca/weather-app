@@ -1,0 +1,24 @@
+@if (data) {
+  <div class="weather">
+    <div class="weather-temperature">
+      <div
+        class="weather-number"
+        waNumberAnimation
+        [targetNumber]="data.temperature"
+      ></div>
+      <span class="weather-degree">°</span>
+    </div>
+
+    <div class="weather-data">
+      <div class="weather-location">{{ data.city }}</div>
+      <div class="weather-date">
+        {{ data.date | date: "HH : mm - EEEE, dd LLL" : "UTC" }}
+      </div>
+    </div>
+
+    <wa-weather-icon
+      class="weather-icon"
+      [condition]="data.condition"
+    ></wa-weather-icon>
+  </div>
+}
