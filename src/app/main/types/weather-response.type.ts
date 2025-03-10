@@ -1,4 +1,3 @@
-import { TWeatherCondition } from 'app/main/types/weather-condition.type';
 import { TWeather, TWeatherMain } from 'app/main/types/weather.type';
 import { TCoordinates } from 'app/shared/types/coordinates.type';
 

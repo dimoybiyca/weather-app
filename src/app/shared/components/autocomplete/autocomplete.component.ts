@@ -9,7 +9,6 @@ import {
   output,
   OutputEmitterRef,
   signal,
-  ViewChild,
   WritableSignal,
 } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';

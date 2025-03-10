@@ -5,7 +5,7 @@ Simple Angular application for displaying weather
 ## Run
 
 - Get API key, you must register at [openweahtermap](https://openweathermap.org/home/sign_up) to get your api key
-- Enter API key for OpenWeatherMap into environtment file.
+- Enter API key for OpenWeatherMap into environment file.
 
 ```
 /src/environtment/environtment.development.ts

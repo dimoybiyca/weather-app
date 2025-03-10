@@ -38,7 +38,7 @@ export class CachedHttpClient extends HttpClient {
   }
 
   private urlWithParams(url: string, params: TRequestParams): string {
-    let serializedParams = '';
+    let serializedParams: string;
 
     if (params instanceof HttpParams) {
       serializedParams = params.toString();

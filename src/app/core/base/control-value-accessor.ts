@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
 import { BaseComponent } from 'app/core/base/component';
-import { takeUntil, tap } from 'rxjs';
+import { takeUntil } from 'rxjs';
 
 @Injectable()
 export abstract class BaseControlValueAccessor<T>
@@ -13,7 +13,7 @@ export abstract class BaseControlValueAccessor<T>
   isTouched: boolean = false;
   isDisabled: boolean = false;
 
-  constructor() {
+  protected constructor() {
     super();
     if (this.control) {
       this.control.valueAccessor = this;
