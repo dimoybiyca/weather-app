@@ -44,9 +44,9 @@ export class NumberAnimationDirective {
         map((_, index) => this.currentNumber + step * index),
         takeWhile(
           (val) =>
-            this.targetNumber() > this.currentNumber
-              ? val < this.targetNumber()
-              : val > this.targetNumber(),
+            this.targetNumber() >= this.currentNumber
+              ? val <= this.targetNumber()
+              : val >= this.targetNumber(),
           true,
         ),
       )

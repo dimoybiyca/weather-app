@@ -4,13 +4,14 @@ import {
   TRequestOptions,
   TRequestParams,
 } from 'app/core/http/get-options.type';
+import { environment } from 'environments/environment.development';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class CachedHttpClient extends HttpClient {
+  private cacheLifetime = environment.CACHE_LIFETIME;
   private cache = new Map<string, { data: any; timestamp: number }>();
-  private cacheDuration = 10 * 60 * 1000; // 10 хвилин
 
   constructor(handler: HttpHandler) {
     super(handler);
@@ -27,7 +28,7 @@ export class CachedHttpClient extends HttpClient {
     const cached = this.cache.get(cacheKey);
 
     // Check if cached data is available and not expired
-    if (cached && now - cached.timestamp < this.cacheDuration) {
+    if (cached && now - cached.timestamp < this.cacheLifetime) {
       return of(cached.data as T); // Return cached data
     }
 

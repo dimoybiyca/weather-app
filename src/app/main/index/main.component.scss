@@ -15,7 +15,7 @@
   &-sidebar {
     grid-column-start: 3;
     grid-column-end: 5;
-    background-color: rgba(180, 180, 180, 0.4);
+    background-color: var(--bg-sidebar);
     border-left: 0.5rem solid var(--gray);
     backdrop-filter: blur(0.5rem);
     overflow: auto;

@@ -3,7 +3,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   effect,
-  ElementRef,
   input,
   InputSignal,
   OnInit,
@@ -33,22 +32,20 @@ export class AutocompleteComponent
   extends BaseControlValueAccessor<TOption<any>>
   implements OnInit
 {
-  @ViewChild('input', { static: true }) inputElement!: ElementRef;
-
   placeholder: InputSignal<string> = input('Search...');
   options: InputSignal<TOption<any>[]> = input<TOption<any>[]>([]);
-  delay: InputSignal<number> = input(300);
+  delay: InputSignal<number> = input(500);
 
   searchChange: OutputEmitterRef<string | null> = output<string | null>();
 
   isDropdownOpen: WritableSignal<boolean> = signal(false);
   activeIndex: WritableSignal<number> = signal(0);
-  lastTerm: string = '';
   searchFormControl = new FormControl<string>('');
+  lastTerm: string = '';
 
   get maxHeight(): string {
     const numItems = this.options().length;
-    return `${numItems * 40}px`;
+    return `${numItems * 4}rem`;
   }
 
   constructor() {
